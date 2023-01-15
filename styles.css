@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo {
+    border: 2px solid #555;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+header form {
+    display: flex;
+}
+
+header input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    margin-right: 10px;
+}
+
+header button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Aside Styles */
+aside {
+    background-color: #f5f5f5;
+    width: 200px;
+    padding: 20px;
+    float: left;
+}
+
+/* Main Styles */
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Counselor Card Styles */
+.counselor-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.counselor-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+    border-radius: 50%;
+    margin: 0 20px 20px 0;
+    maxHeight: 200px;
+    width: 100px;
+}
+
+.counselor-card h4 {
+    margin-top: 0;
+}
+
+.counselor-card ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.counselor-card ul li:before {
+    content: '\2713';
+    display: inline-block;
+    color: gray;
+    padding: 0 6px 0 0;
+}
+
+
+
+.counselor-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Animations */
+.counselor-card {
+    transform: translateY(5px);
+    transition: all 0.5s ease-out;
+}
+
+.counselor-card:hover {
+    opacity: 1;
+    transform: translateY(0);
+}

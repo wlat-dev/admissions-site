@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College Admissions Assistance</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo" id="logo">
+        <form>
+            <input type="search" placeholder="Search for admissions counselors...">
+            <button type="submit">Search</button>
+        </form>
+
+    </header>
+    <aside>
+        <h3>Filter List</h3>
+        <ul>
+            <li>
+                <label for="response-time-filter">Response Time: </label>
+                <select id="response-time-filter" onchange="filterCounselors()">
+                    <option value="all">All</option>
+                    <option value="1">1 day</option>
+                    <option value="2">2 days</option>
+                    <option value="3">3 days</option>
+                </select>
+            </li>
+            <li>
+                <label for="rating-filter">Minimum Rating: </label>
+                <select id="rating-filter" onchange="filterCounselors()">
+                    <option value="0">0</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </li>
+            <li>
+                <label for="price-filter">Minimum Price: </label>
+                <input type="number" id="price-filter" min="20" step="10" onchange="filterCounselors()">
+            </li>
+            <li>
+                <label for="sort-by">Sort By: </label>
+                <select id="sort-by" onchange="sortCounselors()">
+                    <option value="name">Name</option>
+                    <option value="responseTime">Response Time</option>
+                    <option value="rating">Rating</option>
+                    <option value="price">Price</option>
+                </select>
+            </li>
+        </ul>
+    </aside>
+    
+    <main>
+        
+        <h2>Admissions Counselors</h2>
+        <div id="loading" style="display:none">Loading...</div>
+        <div id="message" style="display:none"></div>
+
+        <section id="counselors">
+            <article class="counselor-card">
+                <div class="row">
+                    
+                    <div class="avatar-container">
+                        <img src="avatar.png" alt="Counselor Avatar" class="avatar">
+                    </div>
+                    <div class="bio">
+                        <h4>Name</h4>
+                        <p>Short Biography</p>
+                        <ul>
+                            <li>Response Time: x days</li>
+                            <li>Notable Achievements: x</li>
+                            <li>Star Rating: x</li>
+                            <li>Pricing: $x</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button>View Profile</button>
+            </article>
+            <!-- Repeat the "article" element for each counselor -->
+        </section>
+    </main>
+
+        <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
